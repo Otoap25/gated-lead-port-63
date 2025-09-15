@@ -1,0 +1,157 @@
+diff --git a/Dockerfile b/Dockerfile
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/Dockerfile
+@@ -0,0 +1,49 @@
++# Stage 1: build
++FROM node:18-alpine AS build
++WORKDIR /app
++
++# Install build deps
++COPY package*.json ./
++RUN npm ci
++
++# Copy source and build
++COPY tsconfig.json ./
++COPY src ./src
++RUN npm run build
++
++# Stage 2: runtime
++FROM node:18-alpine AS runtime
++WORKDIR /app
++
++# Copy production deps
++COPY package*.json ./
++RUN npm ci --only=production
++
++COPY --from=build /app/dist ./dist
++
++ENV NODE_ENV=production
++ENV PORT=3000
++
++EXPOSE 3000
++CMD ["node", "dist/index.js"]
++
+diff --git a/.dockerignore b/.dockerignore
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/.dockerignore
+@@ -0,0 +1,8 @@
++node_modules
++dist
++.git
++.gitignore
++Dockerfile
++README.md
++npm-debug.log
++.env
++
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/.github/workflows/ci.yml
+@@ -0,0 +1,33 @@
++name: CI
++
++on:
++  push:
++    branches: [ main ]
++  pull_request:
++    branches: [ main ]
++
++jobs:
++  build:
++    runs-on: ubuntu-latest
++
++    steps:
++      - uses: actions/checkout@v4
++
++      - name: Use Node.js 18
++        uses: actions/setup-node@v4
++        with:
++          node-version: 18
++
++      - name: Install dependencies
++        run: npm ci
++
++      - name: Run tests (if present)
++        run: |
++          if npm run | grep -q 'test'; then
++            echo "Running tests"
++            npm test
++          else
++            echo "No test script found; skipping tests"
++          fi
++
++      - name: Build
++        run: npm run build
++
+diff --git a/Procfile b/Procfile
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/Procfile
+@@ -0,0 +1 @@
++web: npm run start
++
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,46 @@
++# gated-lead-port-63 — Deployment files & instructions
++
++These files help containerize and CI the project, and provide a simple Procfile for platform deploys.
++
++Files added in this patch:
++- Dockerfile — multi-stage build (build → runtime)
++- .dockerignore — keep images small
++- .github/workflows/ci.yml — CI: install, test (if present), build
++- Procfile — start command for Heroku/Render
++
++Important notes
++- This repository appears to be a TypeScript Node app. Ensure `package.json` contains:
++  - "build" script (e.g., "tsc")
++  - "start" script (e.g., "node dist/index.js")
++  - Optional "dev" (e.g., nodemon or ts-node)
++- Ensure `tsconfig.json` outputs compiled files to `dist/` (or update the Dockerfile/CMD accordingly).
++
++How to add these files locally and push (apply this patch)
++1. Save this patch to a file:
++   - save the contents into a file named `add-deploy-files.patch`
++
++2. From the repository root, apply the patch:
++   git apply add-deploy-files.patch
++
++3. Stage, commit and push (recommended: create a branch and PR):
++   git checkout -b add-deploy-files
++   git add Dockerfile .dockerignore .github/workflows/ci.yml Procfile README.md
++   git commit -m "Add deployment files: Dockerfile, .dockerignore, CI workflow, Procfile, README"
++   git push -u origin add-deploy-files
++
++Or push directly to main (if you prefer):
++   git add Dockerfile .dockerignore .github/workflows/ci.yml Procfile README.md
++   git commit -m "Add deployment files: Dockerfile, .dockerignore, CI workflow, Procfile, README"
++   git push origin main
++
++Quick deploy options
++- Render / Railway / Fly / Heroku:
++  - Connect your GitHub repo.
++  - Build command: npm run build
++  - Start command: npm run start
++  - Set required environment variables (PORT is usually set by provider).
++- Docker-based deploy (Cloud Run, ECS, DigitalOcean Apps):
++  - Build: docker build -t myapp:latest .
++  - Run: docker run -e PORT=3000 -p 3000:3000 myapp:latest
++  - Or push image to registry and create service on your provider.
++
++What I prepared
++- A multi-stage Dockerfile, .dockerignore, a basic GitHub Actions CI workflow, a Procfile, and this README with deployment instructions.
++
++Next steps
++- Verify your package.json has the expected "build" and "start" scripts and that tsconfig.json outputs to `dist/`. If your output folder or start command differs, tell me and I'll update the files.
++
