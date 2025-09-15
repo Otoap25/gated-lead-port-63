@@ -122,11 +122,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
-    background-image: url('./assets/digital-tech-background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    @apply text-white;
+    background-color: black;
     position: relative;
   }
 }
