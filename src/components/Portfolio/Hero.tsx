@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero = ({ onDownloadCV }: HeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 via-gray-600 to-gray-800 text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3" />
       
       {/* Floating elements */}
@@ -19,10 +19,10 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-primary text-glow animate-slide-up">
             Russel Gumembi
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white/90 animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white font-semibold animate-slide-up" style={{animationDelay: '0.2s'}}>
             Full Stack Developer & UI/UX Designer
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{animationDelay: '0.4s'}}>
+          <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up" style={{animationDelay: '0.4s'}}>
             Creating beautiful, functional digital experiences with modern technologies and thoughtful design.
           </p>
         </div>
