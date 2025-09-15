@@ -35,12 +35,12 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-600 to-gray-800 text-white relative overflow-hidden">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-foreground animate-slide-up text-glow">
+        <h2 className="text-4xl font-bold text-center mb-16 text-white animate-slide-up text-glow">
           Featured Projects
         </h2>
         
@@ -61,10 +61,10 @@ export const Projects = () => {
               </div>
               
               <CardHeader>
-                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl text-white group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground line-clamp-3">
+                <CardDescription className="text-white line-clamp-3">
                   {project.description}
                 </CardDescription>
               </CardHeader>

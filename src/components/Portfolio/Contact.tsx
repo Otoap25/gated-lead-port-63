@@ -4,21 +4,21 @@ import { Mail, Phone, MapPin, MessageCircle, Linkedin } from 'lucide-react';
 
 export const Contact = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-600 to-gray-800 text-white relative overflow-hidden">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary" />
       
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-foreground animate-slide-up text-glow">
+        <h2 className="text-4xl font-bold text-center mb-16 text-white animate-slide-up text-glow">
           Get In Touch
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-            <h3 className="text-2xl font-semibold mb-6 text-foreground">
+            <h3 className="text-2xl font-semibold mb-6 text-white">
               Let's Work Together
             </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-white text-lg leading-relaxed mb-8">
               I'm always interested in new opportunities and exciting projects. 
               Whether you're looking for a developer, have a question, or just want to say hello, 
               I'd love to hear from you.
@@ -27,22 +27,22 @@ export const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-3 group cursor-pointer hover:text-primary transition-colors">
                 <Mail className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-foreground group-hover:text-primary">gumembirussel@gmail.com</span>
+                <span className="text-white group-hover:text-primary">gumembirussel@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 group cursor-pointer hover:text-primary transition-colors">
                 <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-foreground group-hover:text-primary">+675 81416222</span>
+                <span className="text-white group-hover:text-primary">+675 81416222</span>
               </div>
               <div className="flex items-center gap-3 group cursor-pointer hover:text-primary transition-colors">
                 <MapPin className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-foreground group-hover:text-primary">Port Moresby, Papua New Guinea</span>
+                <span className="text-white group-hover:text-primary">Port Moresby, Papua New Guinea</span>
               </div>
             </div>
           </div>
           
           <Card className="bg-portfolio-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
             <CardHeader>
-              <CardTitle className="text-foreground text-center">Connect With Me</CardTitle>
+              <CardTitle className="text-white text-center">Connect With Me</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <Button 
@@ -90,7 +90,7 @@ export const Contact = () => {
                 </Button>
               </div>
 
-              <p className="text-center text-sm text-muted-foreground pt-2 animate-pulse">
+              <p className="text-center text-sm text-white pt-2 animate-pulse">
                 Choose your preferred way to reach out
               </p>
             </CardContent>
