@@ -40,9 +40,9 @@ export const Contact = () => {
             </div>
           </div>
           
-          <Card className="bg-portfolio-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
+          <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
             <CardHeader>
-              <CardTitle className="text-white text-center">Connect With Me</CardTitle>
+              <CardTitle className="text-black text-center">Connect With Me</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <Button 
@@ -90,7 +90,7 @@ export const Contact = () => {
                 </Button>
               </div>
 
-              <p className="text-center text-sm text-white pt-2 animate-pulse">
+              <p className="text-center text-sm text-gray-600 pt-2 animate-pulse">
                 Choose your preferred way to reach out
               </p>
             </CardContent>

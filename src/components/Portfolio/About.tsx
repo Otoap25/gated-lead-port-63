@@ -48,9 +48,9 @@ export const About = () => {
               </div>
             </div>
             
-            <Card className="bg-portfolio-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
               <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-6 text-white text-center">
+                <h4 className="text-xl font-semibold mb-6 text-black text-center">
                   Technical Skills
                 </h4>
                 <div className="flex flex-wrap gap-2">

@@ -31,7 +31,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
           <Button
             size="lg"
             onClick={onDownloadCV}
-            className="bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+            className="bg-primary hover:bg-primary/90 text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
           >
             <Download className="mr-2 h-5 w-5" />
             Download CV
@@ -39,7 +39,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
           <div className="flex items-center gap-4">
             <Button
               size="lg"
-              className="bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 font-bold text-base transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 font-bold text-base transform hover:scale-105 shadow-lg hover:shadow-xl"
               asChild
             >
               <a href="mailto:gumembirussel@gmail.com">
@@ -49,7 +49,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
             </Button>
             <Button
               size="lg"
-              className="bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
               asChild
             >
               <a href="https://github.com/russelgumembi" target="_blank" rel="noopener noreferrer">
@@ -58,7 +58,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
             </Button>
             <Button
               size="lg"
-              className="bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
               asChild
             >
               <a href="https://www.linkedin.com/in/russel-gumembi-664b2953" target="_blank" rel="noopener noreferrer">

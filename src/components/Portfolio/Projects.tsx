@@ -48,7 +48,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden bg-portfolio-card border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 hover:rotate-1 card-glow animate-slide-up group"
+              className="overflow-hidden bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 hover:rotate-1 card-glow animate-slide-up group"
               style={{animationDelay: `${index * 0.2}s`}}
             >
               <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center relative overflow-hidden">
@@ -61,10 +61,10 @@ export const Projects = () => {
               </div>
               
               <CardHeader>
-                <CardTitle className="text-xl text-white group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl text-black group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-white line-clamp-3">
+                <CardDescription className="text-gray-600 line-clamp-3">
                   {project.description}
                 </CardDescription>
               </CardHeader>
