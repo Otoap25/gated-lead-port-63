@@ -43,8 +43,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
               asChild
             >
               <a href="mailto:gumembirussel@gmail.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Contact
+                <Mail className="h-5 w-5" />
               </a>
             </Button>
             <Button
