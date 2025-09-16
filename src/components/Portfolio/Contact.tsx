@@ -47,7 +47,7 @@ export const Contact = () => {
             <CardContent className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+                className="w-full bg-[#0077B5] hover:bg-[#005885] text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
                 asChild
               >
                 <a 
@@ -63,6 +63,17 @@ export const Contact = () => {
               
               <Button 
                 size="lg" 
+                className="w-full bg-[#EA4335] hover:bg-[#C23321] text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+                asChild
+              >
+                <a href="mailto:gumembirussel@gmail.com" className="flex items-center justify-center gap-3">
+                  <Mail className="h-5 w-5" />
+                  Send Email
+                </a>
+              </Button>
+
+              <Button 
+                size="lg" 
                 className="w-full bg-[#25D366] hover:bg-[#22C55E] text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"             
                 asChild
               >
@@ -76,19 +87,6 @@ export const Contact = () => {
                   WhatsApp Message
                 </a>
               </Button>
-
-              <div className="pt-4 border-t border-border">
-                <Button 
-                  size="lg" 
-                  className="w-full bg-primary/50 text-black hover:bg-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
-                  asChild
-                >
-                  <a href="mailto:gumembirussel@gmail.com" className="flex items-center justify-center gap-3">
-                    <Mail className="h-5 w-5" />
-                    Send Email
-                  </a>
-                </Button>
-              </div>
 
               <p className="text-center text-sm text-gray-600 pt-2 animate-pulse">
                 Choose your preferred way to reach out
