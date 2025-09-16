@@ -27,19 +27,19 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{animationDelay: '0.6s'}}>
+        <div className="flex flex-col items-center justify-center gap-6 mb-12 animate-slide-up" style={{animationDelay: '0.6s'}}>
           <Button
             size="lg"
             onClick={onDownloadCV}
-            className="bg-primary hover:bg-primary/90 text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+            className="bg-primary hover:bg-primary/90 text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold w-full sm:w-auto"
           >
             <Download className="mr-2 h-5 w-5" />
             Download CV
           </Button>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-3 sm:gap-4">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 font-bold text-base transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 font-bold transform hover:scale-105 shadow-lg hover:shadow-xl p-3"
               asChild
             >
               <a href="mailto:gumembirussel@gmail.com">
@@ -48,7 +48,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
             </Button>
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold p-3"
               asChild
             >
               <a href="https://github.com/russelgumembi" target="_blank" rel="noopener noreferrer">
@@ -57,7 +57,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
             </Button>
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-bold p-3"
               asChild
             >
               <a href="https://www.linkedin.com/in/russel-gumembi-664b2953" target="_blank" rel="noopener noreferrer">
