@@ -97,7 +97,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="fullName">Full Name *</Label>
+              <Label htmlFor="fullName" className="text-black">Full Name *</Label>
               <Input
                 id="fullName"
                 value={formData.fullName}
@@ -106,7 +106,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
               />
             </div>
             <div>
-              <Label htmlFor="email">Email *</Label>
+              <Label htmlFor="email" className="text-black">Email *</Label>
               <Input
                 id="email"
                 type="email"
@@ -119,7 +119,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="company">Company</Label>
+              <Label htmlFor="company" className="text-black">Company</Label>
               <Input
                 id="company"
                 value={formData.company}
@@ -127,7 +127,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
               />
             </div>
             <div>
-              <Label htmlFor="role">Your Role</Label>
+              <Label htmlFor="role" className="text-black">Your Role</Label>
               <Input
                 id="role"
                 value={formData.role}
@@ -137,7 +137,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
           </div>
           
           <div>
-            <Label htmlFor="howFound">How did you find me?</Label>
+            <Label htmlFor="howFound" className="text-black">How did you find me?</Label>
             <Select onValueChange={(value) => handleChange('howFound', value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select an option" />
@@ -153,7 +153,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
           </div>
           
           <div>
-            <Label htmlFor="interestReason">What interests you about my profile?</Label>
+            <Label htmlFor="interestReason" className="text-black">What interests you about my profile?</Label>
             <Textarea
               id="interestReason"
               rows={3}
