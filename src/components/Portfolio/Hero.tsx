@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import profilePicture from '@/assets/profile-picture.jpg';
 
 interface HeroProps {
   onDownloadCV: () => void;
@@ -16,7 +17,14 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-primary text-glow animate-slide-up">
+          <div className="mb-6 sm:mb-8 animate-slide-up">
+            <img
+              src={profilePicture}
+              alt="Russel Gumembi - Full Stack Developer"
+              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/30 mx-auto object-cover shadow-2xl"
+            />
+          </div>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-primary text-glow animate-slide-up" style={{animationDelay: '0.1s'}}>
             Russel Gumembi
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8 text-white font-semibold animate-slide-up px-4" style={{animationDelay: '0.2s'}}>
