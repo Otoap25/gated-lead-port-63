@@ -166,16 +166,15 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
           <div className="flex gap-3 pt-4">
             <Button
               type="button"
-              variant="outline"
               onClick={onClose}
-              className="flex-1"
+              className="flex-1 bg-red-500 hover:bg-red-600 text-white"
             >
               Cancel
             </Button>
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1"
+              className="flex-1 bg-green-500 hover:bg-green-600 text-white"
             >
               {isSubmitting ? 'Processing...' : 'Download CV'}
             </Button>
