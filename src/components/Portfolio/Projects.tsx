@@ -5,9 +5,18 @@ import { ExternalLink, Github } from 'lucide-react';
 import hiltonImage from '@/assets/hilton-port-moresby.jpg';
 import okyAppImage from '@/assets/oky-app-real.jpg';
 import upngCCTVImage from '@/assets/upng-campus-real.jpg';
+import websiteTemplateImage from '@/assets/website-template-project.jpg';
 
 export const Projects = () => {
   const projects = [
+    {
+      title: "Professional Website Template",
+      description: "Modern, responsive website template designed for businesses and professionals. Features clean design, optimized performance, and customizable components for various industries.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design", "Modern UI/UX"],
+      github: "https://github.com",
+      live: "https://www.niusys.netlify.app",
+      image: websiteTemplateImage
+    },
     {
       title: "Oky Period Tracker App",
       description: "The world's first period tracker app for girls, created with girls. Provides menstrual health information in fun, creative ways to empower young women in Papua New Guinea.",
@@ -21,7 +30,7 @@ export const Projects = () => {
       description: "Comprehensive CCTV installation at University of Papua New Guinea campus using Hikvision cameras on Cambium wireless network with integrated audio/video recording and PA system connectivity.",
       technologies: ["Hikvision CCTV", "Cambium Wireless", "Network Security", "Audio/Video Recording", "PA System Integration"],
       github: "https://github.com",
-      live: "https://www.upng.ac.pg/",
+      live: "https://www.hikvision.com/en/",
       image: upngCCTVImage
     },
     {
