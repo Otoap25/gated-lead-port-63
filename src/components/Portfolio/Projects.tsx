@@ -36,7 +36,7 @@ export const Projects = () => {
     {
       title: "Hilton Port Moresby Hotel IT Systems",
       description: "Complete IT infrastructure design and implementation for Hilton Port Moresby Hotel & Residences, including network security, cloud integration, and system administration.",
-      technologies: ["Network Security", "Cloud Computing", "System Administration", "Infrastructure Design"],
+      technologies: ["CCTV", "WiFi", "IPTV", "VoiP", "Digital Radio", "AV Systems", "Network Security", "Cloud Computing", "System Administration"],
       github: "https://github.com",
       live: "https://www.hilton.com/en/hotels/pomsmhi-hilton-port-moresby-hotel-and-residences/",
       image: hiltonImage
