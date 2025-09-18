@@ -14,7 +14,7 @@ export const Projects = () => {
       description: "Modern, responsive website template designed for businesses and professionals. Features clean design, optimized performance, and customizable components for various industries.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design", "Modern UI/UX"],
       github: "https://github.com",
-      live: "https://www.niusys.netlify.app",
+      live: "https://niusys.netlify.app",
       image: websiteTemplateImage
     },
     {
