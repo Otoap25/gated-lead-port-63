@@ -53,7 +53,7 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
       setTimeout(() => {
         toast({
           title: "CV Download Temporarily Unavailable",
-          description: "We're currently working on the download feature. Please email me directly at gumembirussel@gmail.com to request my CV.",
+          description: "We're currently working on the download feature. Please email me directly at gumembirussel@gmail.com and I'll send my CV to your email address.",
           duration: 8000,
         });
       }, 1000);
