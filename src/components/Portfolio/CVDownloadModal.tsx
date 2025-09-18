@@ -46,14 +46,17 @@ export const CVDownloadModal = ({ isOpen, onClose }: CVDownloadModalProps) => {
 
       toast({
         title: "Thank you!",
-        description: "Your information has been recorded. Your CV download will begin shortly.",
+        description: "Your information has been recorded.",
       });
 
-      // Simulate CV download (replace with actual file URL)
-      const link = document.createElement('a');
-      link.href = '/path-to-cv.pdf'; // Replace with actual CV file path
-      link.download = 'John_Doe_CV.pdf';
-      link.click();
+      // Show message about CV availability
+      setTimeout(() => {
+        toast({
+          title: "CV Download Temporarily Unavailable",
+          description: "We're currently working on the download feature. Please email me directly at gumembirussel@gmail.com to request my CV.",
+          duration: 8000,
+        });
+      }, 1000);
 
       setFormData({
         email: '',
