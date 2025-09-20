@@ -3,17 +3,21 @@ import { Hero } from '@/components/Portfolio/Hero';
 import { About } from '@/components/Portfolio/About';
 import { Projects } from '@/components/Portfolio/Projects';
 import { Contact } from '@/components/Portfolio/Contact';
-import { CVDownloadModal } from '@/components/Portfolio/CVDownloadModal';
 import { useVisitTracking } from '@/hooks/useVisitTracking';
+import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { toast } = useToast();
   
   // Track page visits
   useVisitTracking();
 
   const handleDownloadCV = () => {
-    setIsModalOpen(true);
+    toast({
+      title: "CV Request",
+      description: "Please email me directly at gumembirussel@gmail.com and I'll send my CV to your email address.",
+      duration: 8000,
+    });
   };
 
   return (
@@ -22,11 +26,6 @@ const Index = () => {
       <About />
       <Projects />
       <Contact />
-      
-      <CVDownloadModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-      />
     </div>
   );
 };
