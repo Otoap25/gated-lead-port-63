@@ -28,7 +28,7 @@ export const Hero = ({ onDownloadCV }: HeroProps) => {
             Russel Gumembi
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8 text-white font-semibold animate-slide-up px-4" style={{animationDelay: '0.2s'}}>
-            DevOps Engineer & UI/UX Designer
+            UI/UX Designer
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up px-4" style={{animationDelay: '0.4s'}}>
             Creating beautiful, functional digital experiences with modern technologies and thoughtful design.
